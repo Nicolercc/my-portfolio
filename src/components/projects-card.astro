@@ -1,0 +1,53 @@
+---
+interface Props {
+  name: string;
+  overview: string;
+  highlights: string[];
+  image?: string;
+  link:string;
+}
+
+const { name, overview, highlights, image, link } = Astro.props;
+---
+
+<a href={link} class="group relative grid gap-5 mt-5 pb-1 transition-all   ">
+    <!-- Background Effect -->
+    <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block md:block lg:group-hover:bg-slate-800/50 md:group-hover:bg-slate-800/50  py-5"></div>
+  
+    <!-- Left Column: Image -->
+    <!-- <div class="z-10 sm:col-span-2 md:col-span-2">
+      {image && (
+        <img src={image} alt={name} class="w-full h-full object-cover rounded-md" />
+      )} 
+    </div> -->
+  
+    <!-- Right Column: Content -->
+    <div class=" ">
+      <h3 class="font-medium leading-snug text-slate-200 display: inline-block ">
+        <div class="inline-flex items-baseline font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base">
+          <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+          {name}   
+          <div class="px-0 pt-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4 transform transition-transform duration-200 group-hover:-translate-y-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </svg>
+          </div>
+        
+        </div>
+        
+      </h3>
+      
+      <p class="mt-2 text-sm leading-normal text-slate-400">{overview}</p>
+      <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+        {highlights.map((item, index) => (
+          <li class="mr-1.5 mt-2">
+            <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+              {item}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </a>

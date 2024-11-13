@@ -1,35 +1,47 @@
 ---
 import "@fontsource/poppins";
-import ExperienceCard from "../components/experience-card.astro";
+import ProjectsCard from "../components/projects-card.astro";
 import '../styles/global.css'
 
-const EXPERIENCE = [
-  {
-    "timePeriod": "2024 — Present",
-    "jobTitle": "Senior Frontend Engineer, Accessibility",
-    "jobDescription": "Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-    "skills": ["javascript", "accessibility", "react", "html", "css"]
+const PROJECTS = [
+
+{
+    name: "Impactify",
+    overview: "An activism hub designed to empower users by providing easy access to relevant news, local events, and donation opportunities. You led the design process, ensuring a streamlined user experience, from ideation to execution. Impactify was developed with a user-centric approach, featuring a clean, accessible interface and an integrated Stripe payment gateway for seamless donations.",
+    highlights: [
+      "Multi-user support",
+      "Smooth navigation",
+      "Interactive design tailored for impact-driven individuals"
+    ],
+	 image: "/impactify.png",
+	 link:'https://impactifyy.netlify.app'
   },
   {
-    "timePeriod": "2021 — 2024",
-    "jobTitle": "Frontend Developer",
-    "jobDescription": "Developed high-performance web applications for a SaaS platform. Worked with modern JavaScript frameworks to create responsive and scalable UIs. Collaborated with backend developers to integrate APIs.",
-    "skills": ["vue.js", "javascript", "sass", "git", "api integration"]
+    name: "YouTube Clone",
+    overview: "A full-stack application that mirrors the functionality of YouTube, showcasing your skills in recreating complex, dynamic platforms. Developed from scratch, this project demonstrates your ability to handle large data sets and design an intuitive interface inspired by real-world applications.",
+    highlights: [
+      "Frontend interaction",
+      "Backend data handling",
+      "API integration (if applicable)",
+      "Content delivery at scale"
+    ],
+	 image: "/",
+	 link:'https://gotostreamifyy.netlify.app/categories'
   },
   {
-    "timePeriod": "2019 — 2021",
-    "jobTitle": "UI/UX Designer & Developer",
-    "jobDescription": "Designed and developed interactive prototypes and user interfaces for various web applications. Focused on user experience and usability while implementing front-end development best practices.",
-    "skills": ["adobe xd", "html", "css", "javascript", "ux design", "figma"]
-  },
-  {
-    "timePeriod": "2017 — 2019",
-    "jobTitle": "Junior Frontend Engineer",
-    "jobDescription": "Contributed to the development of client-side web applications and collaborated with senior engineers to implement complex features. Participated in code reviews and improved code quality.",
-    "skills": ["javascript", "jquery", "html5", "css3", "bootstrap"]
+    name: "Asbestos Project Management Site",
+    overview: "A comprehensive platform for project management specifically tailored to asbestos management services. This project showcases your versatility in addressing niche business needs through web solutions. It includes well-organized service pages, a 'Get a Quote' feature, and an interface designed with industry relevance and accessibility in mind.",
+    highlights: [
+      "Industry-specific user flow",
+      "Clear service breakdown",
+      "Accessible design with a strong focus on user-friendly navigation"
+    ],
+	 image: "/",
+	 link:'https://olgaburbano.netlify.app'
   }
 ]
 ---
+
 
 <html lang="en">
 	<head>
@@ -67,31 +79,31 @@ const EXPERIENCE = [
 	
 	<body class="bg-slate-900">
 		<main class="grid grid-cols-1 md:grid-cols-2 w-screen h-screen overflow-hidden ">
-			<section class="flex flex-col justify-between h-full pl-44 py-16">
+			<section class="flex flex-col justify-between h-full py-16 sm:px-4 px-16 md:pl-44 lg:pl-44 ">
 				<div class="flex flex-col ">
 					<div class="flex flex-col gap-y-4">
 						<div>
-							<h1 class="text-slate-200 text-5xl  py-5 font-bold sm:text-5xl tracking-tight">Nicole Rodriguez</h1>
+							<h1 class="text-slate-200 text-5xl  py-5 font-bold sm:text-5xl tracking-tight ">Nicole Rodriguez</h1>
 							<h3 class="text-slate-200 text-xl">Full-Stack Web Engineer</h3>
 						</div>
-						<p class="text-slate-400">I build pixel-perfect, engaging, and accessible digital experiences.</p>
+						<p class="text-slate-400">I turn ideas into functional, pixel-perfect digital experiences with a complete front-to-back development approach.</p>
 					</div>
 					<nav class="nav hidden md:block lg:block" aria-label="In-page navigation">
 						<ul class="hidden md:flex flex-col gap-y-3 mt-16 w-max">
 							<li class="group">
-								<a class="flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 active" href="#about">
+								<a class="nav-link flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#about" data-active="true">
 									<span class="nav-indicator inline-block h-[1px] w-7 bg-slate-600 transition-all group-hover:w-12 group-focus-visible:w-12 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
 									<span>About</span>
 								</a>
 							</li>
 							<li class="group">
-								<a class="flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#Experience">
+								<a class="nav-link flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#Experience" data-active="false">
 									<span class="nav-indicator inline-block h-[1px] w-7 bg-slate-600 transition-all group-hover:w-12 group-focus-visible:w-12 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-									<span>Experience</span>
+									<span>Projects</span>
 								</a>
 							</li>
 							<li class="group">
-								<a class="flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#Blog">
+								<a class="nav-link flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#Blog" data-active="false">
 									<span class="nav-indicator inline-block h-[1px] w-7 bg-slate-600 transition-all group-hover:w-12 group-focus-visible:w-12 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
 									<span>Blog</span>
 								</a>
@@ -100,9 +112,9 @@ const EXPERIENCE = [
 					</nav>
 					
 				</div>
-				<footer class="flex gap-x-8 items-center pb-9">
+				<footer class="flex gap-x-8 items-center pb-9 " style="padding-top: 4rem;">
 					<!-- github --> 
-					<a class="hover:scale-125 transition-all" href="#">
+					<a class="hover:scale-125 transition-all" href="https://github.com/Nicolercc">
 						<svg class="text-slate-400 w-6 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
 					</a>
 					<!-- linkedin -->
@@ -124,25 +136,25 @@ const EXPERIENCE = [
 				 <!-- none of the styles want to apply to the div below. why? -->
 					<p class="uppercase text-slate-400  md:hidden lg:hidden " >About</p>
 					<p class="text-slate-400">
-						I’m a junior fullstack developer passionate about creating meaningful, user-centered solutions. What drives me is the excitement of delivering products that make a real impact—where design and functionality come together to create something both beautiful and practical. I believe in building with the user in mind, ensuring that every experience is accessible, intuitive, and built to last.
+						Hi, I’m Nicole Rodriguez, a junior full-stack developer passionate about creating user-centered, impactful digital experiences. With a background in journalism and politics, I transitioned into tech to use code as a tool for meaningful change.
+
+
 					</p>
 					<p class="text-slate-400">
-						My background in journalism and politics originally shaped my desire to make a difference. Transitioning into tech gave me the opportunity to broaden that impact, using code as a tool for creating tangible solutions. I’m committed to continuous learning and growth, always seeking ways to refine my skills and stay ahead of the curve in this fast-paced industry.
+						I’m skilled in JavaScript, React, and TypeScript, and I thrive on building products that seamlessly blend design and functionality. My work includes Impactify, a multi-user activism hub, and a hackathon-winning app for NYC’s Restaurant Week.
 					</p>
 					<p class="text-slate-400">
-						When I’m not at the computer, I enjoy connecting with nature, reading in NYC parks, and traveling. I bring the same curiosity and drive for discovery into my work, where I focus on building experiences that resonate with real people.
-					</p>
+						Always learning, always building—when I’m not in front of a computer, I’m literally touching grass! You can find me at a park in New York City, connecting with nature, reading, or traveling. I bring that same curiosity and drive for discovery into my work, focusing on building experiences that resonate with real people.
 				</div>
 				<div class="w-full flex flex-col gap-y-4" id="Experience">
 					<p class="uppercase text-slate-400  md:hidden lg:hidden">Experience</p>
-					{EXPERIENCE.map((e) => (
-						<ExperienceCard 
-							jobTitle={e.jobTitle}
-							jobDescription={e.jobDescription}
-							timePeriod={e.timePeriod}
-							skills={e.skills}
+					{PROJECTS.map((project) => (
+						<ProjectsCard
+						  name={project.name}
+						  overview={project.overview}
+						  highlights={project.highlights}
 						/>
-					))}
+					  ))}
 				</div>
 				<div class="text-slate-400 flex justify-content" id="Blog">
 					<p class="uppercase text-slate-400  md:hidden lg:hidden">Blog</p>
@@ -162,5 +174,43 @@ const EXPERIENCE = [
       }
     });
   </script>
+
+  <script is:inline>
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Function to update active state
+    function setActiveLink(clickedLink) {
+      // Remove active state from all links
+      navLinks.forEach(link => {
+        link.removeAttribute('data-active');
+        link.classList.remove('text-slate-200');
+        link.querySelector('.nav-indicator').classList.remove('w-12', 'bg-slate-200');
+      });
+      
+      // Add active state to clicked link
+      clickedLink.setAttribute('data-active', 'true');
+      clickedLink.classList.add('text-slate-200');
+      clickedLink.querySelector('.nav-indicator').classList.add('w-12', 'bg-slate-200');
+    }
+
+    // Add click handlers to all links
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        setActiveLink(e.currentTarget);
+      });
+    });
+  </script>
+
+  <style>
+    /* Add this to your existing styles */
+    .nav-link[data-active="true"] {
+      @apply text-slate-200;
+    }
+    
+    .nav-link[data-active="true"] .nav-indicator {
+      @apply w-12 bg-slate-200;
+    }
+  </style>
 	</body>
 </html>
