@@ -10,7 +10,7 @@ interface Props {
 const { name, overview, highlights, image, link } = Astro.props;
 ---
 
-<a href={link} class="group relative grid gap-5 mt-5 pb-1 transition-all   ">
+<a href={link} target="_blank"  rel="noopener noreferrer" class="group relative grid gap-5 mt-5 pb-1 transition-all  card-link ">
     <!-- Background Effect -->
     <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block md:block lg:group-hover:bg-slate-800/50 md:group-hover:bg-slate-800/50  py-5"></div>
   
