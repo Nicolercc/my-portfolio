@@ -1,3 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
 	scroll-behavior: smooth !important;
+}
+
+body {
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	background-color: #f0f0f0;
+}
+
+.gradient-cursor {
+	width: 800px;
+	height: 800px;
+	background: radial-gradient(
+		circle at center,
+		rgba(58, 17, 104, 0.31) 0%,
+		/* Light blue with opacity */ rgba(56, 189, 248, 0.1) 50%,
+		transparent 70%
+	);
+	border-radius: 100%;
+	pointer-events: none; /* Ensures cursor doesn't interfere with clicks */
+	position: fixed; /* Fixed position relative to viewport */
+	transform: translate(-50%, -50%); /* Centers the gradient on cursor */
+	z-index: 9999; /* Keeps cursor above other elements */
+	transition: all 0.1s ease; /* Smooth movement */
+	mix-blend-mode: screen; /* Blends with background */
 }

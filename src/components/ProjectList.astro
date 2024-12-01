@@ -1,0 +1,29 @@
+---
+
+
+import ProjectsCard from './projects-card.astro';
+
+
+interface Project {
+    name: string;
+    overview:string;
+    highlights: string[];
+    link: string;
+}
+
+export const props = {
+    projects: [] as Project[]
+}
+---
+
+<div class="grid gap-6">
+    {
+    props.projects.map((project)=>(
+    <ProjectsCard
+    name = {project.name}
+    overview={project.overview}
+    highlights={project.highlights}
+    link={link}
+    />
+    ))}
+</div>

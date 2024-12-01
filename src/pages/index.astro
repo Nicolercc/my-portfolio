@@ -1,7 +1,9 @@
 ---
 import "@fontsource/poppins";
 import ProjectsCard from "../components/projects-card.astro";
-import '../styles/global.css'
+import Header from "../components/Header.astro";
+import Data from '../data/Projects.astro'
+ import '../styles/global.css'
 
 const PROJECTS = [
 
@@ -47,46 +49,19 @@ const PROJECTS = [
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		 <link rel="stylesheet" href="/src/styles/global.css" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Nicole's Portfolio</title>
-		<style>
-			body {
-			  margin: 0;
-			  overflow: hidden;
-			  height: 100vh;
-			  background-color: #f0f0f0;
-			}
 		
-			.gradient-cursor {
-			  width: 800px;
-			  height: 800px;
-			  background: radial-gradient(circle at center, 
-			    rgba(58, 17, 104, 0.31) 0%,  /* Light blue with opacity */
-			    rgba(56, 189, 248, 0.1) 50%,
-			    transparent 70%
-			  );
-			  border-radius: 100%;
-			  pointer-events: none;  /* Ensures cursor doesn't interfere with clicks */
-			  position: fixed;       /* Fixed position relative to viewport */
-			  transform: translate(-50%, -50%); /* Centers the gradient on cursor */
-			  z-index: 9999;        /* Keeps cursor above other elements */
-			  transition: all 0.1s ease; /* Smooth movement */
-			  mix-blend-mode: screen;    /* Blends with background */
-			}
-		  </style>
 	</head>
 	
 	<body class="bg-slate-900">
-		<main class="grid grid-cols-1 md:grid-cols-2 w-screen h-screen overflow-hidden ">
+		<main class="grid grid-cols-1 md:grid-cols-2 w-screen h-screen overflow-hidden scroll-container overflow-y-scroll">
 			<section class="flex flex-col justify-between h-full py-16 sm:px-4 px-16 md:pl-44 lg:pl-44 ">
 				<div class="flex flex-col ">
 					<div class="flex flex-col gap-y-4">
-						<div>
-							<h1 class="text-slate-200 text-5xl  py-5 font-bold sm:text-5xl tracking-tight ">Nicole Rodriguez</h1>
-							<h3 class="text-slate-200 text-xl">Full-Stack Web Engineer</h3>
-						</div>
-						<p class="text-slate-400">I turn ideas into functional, pixel-perfect digital experiences with a complete front-to-back development approach.</p>
+					<Header />
 					</div>
 					<nav class="nav hidden md:block lg:block" aria-label="In-page navigation">
 						<ul class="hidden md:flex flex-col gap-y-3 mt-16 w-max">
