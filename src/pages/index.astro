@@ -2,22 +2,23 @@
 import "@fontsource/poppins";
 import ProjectsCard from "../components/projects-card.astro";
 import Header from "../components/Header.astro";
-import Data from '../data/Projects.astro'
+// import {projects} from '../data/Projects.astro'
  import '../styles/global.css'
 
 const PROJECTS = [
 
-{
-    name: "Impactify",
-    overview: "An activism hub designed to empower users by providing easy access to relevant news, local events, and donation opportunities. You led the design process, ensuring a streamlined user experience, from ideation to execution. Impactify was developed with a user-centric approach, featuring a clean, accessible interface and an integrated Stripe payment gateway for seamless donations.",
-    highlights: [
-      "Multi-user support",
-      "Smooth navigation",
-      "Interactive design tailored for impact-driven individuals"
-    ],
-	 image: "/impactify.png",
-	 link:'https://impactifyy.netlify.app'
-  },
+	{
+	  name: "Asbestos Project Management Site",
+	  overview: "A comprehensive platform for project management specifically tailored to asbestos management services. This project showcases your versatility in addressing niche business needs through web solutions. It includes well-organized service pages, a 'Get a Quote' feature, and an interface designed with industry relevance and accessibility in mind.",
+	  highlights: [
+		"Industry-specific user flow",
+		"Clear service breakdown",
+		"Accessible design with a strong focus on user-friendly navigation"
+	  ],
+	   image: "/",
+	   link:'https://olgaburbano.netlify.app'
+	},
+
   {
     name: "YouTube Clone",
     overview: "A full-stack application that mirrors the functionality of YouTube, showcasing your skills in recreating complex, dynamic platforms. Developed from scratch, this project demonstrates your ability to handle large data sets and design an intuitive interface inspired by real-world applications.",
@@ -31,23 +32,22 @@ const PROJECTS = [
 	 link:'https://gotostreamifyy.netlify.app/categories'
   },
   {
-    name: "Asbestos Project Management Site",
-    overview: "A comprehensive platform for project management specifically tailored to asbestos management services. This project showcases your versatility in addressing niche business needs through web solutions. It includes well-organized service pages, a 'Get a Quote' feature, and an interface designed with industry relevance and accessibility in mind.",
+    name: "Impactify",
+    overview: "An activism hub designed to empower users by providing easy access to relevant news, local events, and donation opportunities. You led the design process, ensuring a streamlined user experience, from ideation to execution. Impactify was developed with a user-centric approach, featuring a clean, accessible interface and an integrated Stripe payment gateway for seamless donations.",
     highlights: [
-      "Industry-specific user flow",
-      "Clear service breakdown",
-      "Accessible design with a strong focus on user-friendly navigation"
+      "Multi-user support",
+      "Smooth navigation",
+      "Interactive design tailored for impact-driven individuals"
     ],
-	 image: "/",
-	 link:'https://olgaburbano.netlify.app'
-  }
+	 image: "/impactify.png",
+	 link:'https://impactifyy.netlify.app'
+  },
 ]
 ---
 
-
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8" /> 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		 <!-- <link rel="stylesheet" href="/src/styles/global.css" /> -->
 		<meta name="viewport" content="width=device-width" />
@@ -57,7 +57,7 @@ const PROJECTS = [
 	</head>
 	
 	<body class="bg-slate-900">
-		<main class="grid grid-cols-1 md:grid-cols-2 w-screen h-screen overflow-hidden scroll-container overflow-y-scroll">
+		<main class="grid md:grid-cols-2 w-screen h-screen overflow-hidden scroll-container overflow-y-scroll">
 			<section class="flex flex-col justify-between h-full py-16 sm:px-4 px-16 md:pl-44 lg:pl-44 ">
 				<div class="flex flex-col ">
 					<div class="flex flex-col gap-y-4">
@@ -84,10 +84,9 @@ const PROJECTS = [
 								</a>
 							</li>
 						</ul>
-					</nav>
-					
+					</nav>			
 				</div>
-				<footer class="flex gap-x-8 items-center pb-9 " style="padding-top: 4rem;">
+				<footer class="hidden sm:flex gap-x-8 items-center pb-9 " style="padding-top: 4rem;">
 					<!-- github --> 
 					<a class="hover:scale-125 transition-all" href="https://github.com/Nicolercc">
 						<svg class="text-slate-400 w-6 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
@@ -106,7 +105,7 @@ const PROJECTS = [
 					</a>
 				</footer>
 			</section>
-			<section class="h-full px-12 py-16 flex flex-col pr-44 gap-y-24 overflow-y-scroll max-h-screen" id="About">
+			<section class="h-full px-12 py-16 flex flex-col pr-44 gap-y-24 md:overflow-y-scroll max-h-screen" id="About">
 				<div class="flex flex-col gap-y-6">
 				 <!-- none of the styles want to apply to the div below. why? -->
 					<p class="uppercase text-slate-400  md:hidden lg:hidden " >About</p>
@@ -134,10 +133,10 @@ const PROJECTS = [
 				</div>
 				<div class="text-slate-400 flex justify-content" id="Blog">
 					<p class="uppercase text-slate-400  md:hidden lg:hidden">Blog</p>
-					<p>BLOG CONTENT WILL GO HERE</p>
+					<p>Blog Coming Soon: Exciting insights and stories in tech, coding, and beyond. Stay tuned!</p>
 				</div>
+	 -->
 			</section>
-
 		</main>
 		<div class="gradient-cursor"></div>
 
