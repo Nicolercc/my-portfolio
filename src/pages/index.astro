@@ -64,9 +64,9 @@ const PROJECTS = [
 					<Header />
 					</div>
 					<nav class="nav hidden md:block lg:block" aria-label="In-page navigation">
-						<ul class="hidden md:flex flex-col gap-y-3 mt-16 w-max">
+						<ul class="hidden md:flex flex-col  gap-y-3 mt-16 w-max">
 							<li class="group">
-								<a class="nav-link flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#about" data-active="true">
+								<a class="nav-link flex items-center py-3 text-slate-500 uppercase gap-x-2 hover:scale-110 transition-all text-xs font-bold tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200" href="#About" data-active="true">
 									<span class="nav-indicator inline-block h-[1px] w-7 bg-slate-600 transition-all group-hover:w-12 group-focus-visible:w-12 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
 									<span>About</span>
 								</a>
@@ -105,21 +105,27 @@ const PROJECTS = [
 					</a>
 				</footer>
 			</section>
-			<section class="h-full px-12 py-16 flex flex-col pr-44 gap-y-24 md:overflow-y-scroll max-h-screen" id="About">
-				<div class="flex flex-col gap-y-6">
-				 <!-- none of the styles want to apply to the div below. why? -->
-					<p class="uppercase text-slate-400  md:hidden lg:hidden " >About</p>
-					<p class="text-slate-400">
-						Hi, I’m Nicole Rodriguez, a junior full-stack developer passionate about creating user-centered, impactful digital experiences. With a background in journalism and politics, I transitioned into tech to use code as a tool for meaningful change.
+			<section class="h-full px-12  flex flex-col pr-44 gap-y-24 md:overflow-y-scroll max-h-screen mt-10"  >
+				<section id="About" class="py-16" >
 
 
-					</p>
-					<p class="text-slate-400">
-						I’m skilled in JavaScript, React, and TypeScript, and I thrive on building products that seamlessly blend design and functionality. My work includes Impactify, a multi-user activism hub, and a hackathon-winning app for NYC’s Restaurant Week.
-					</p>
-					<p class="text-slate-400">
-						Always learning, always building—when I’m not in front of a computer, I’m literally touching grass! You can find me at a park in New York City, connecting with nature, reading, or traveling. I bring that same curiosity and drive for discovery into my work, focusing on building experiences that resonate with real people.
-				</div>
+					<div class="flex flex-col gap-y-6" >
+					 <!-- none of the styles want to apply to the div below. why? -->
+						<p class="uppercase text-slate-400  md:hidden lg:hidden " >About</p>
+						<p class="text-slate-400">
+							Hi, I’m Nicole Rodriguez, a junior full-stack developer passionate about creating user-centered, impactful digital experiences. With a background in journalism and politics, I transitioned into tech to use code as a tool for meaningful change.
+	
+	
+						</p>
+						<p class="text-slate-400">
+							I’m skilled in JavaScript, React, and TypeScript, and I thrive on building products that seamlessly blend design and functionality. My work includes Impactify, a multi-user activism hub, and a hackathon-winning app for NYC’s Restaurant Week.
+						</p>
+						<p class="text-slate-400">
+							Always learning, always building—when I’m not in front of a computer, I’m literally touching grass! You can find me at a park in New York City, connecting with nature, reading, or traveling. I bring that same curiosity and drive for discovery into my work, focusing on building experiences that resonate with real people.
+					</div>
+				
+				
+				</section>
 				<div class="w-full flex flex-col gap-y-4" id="Experience">
 					<p class="uppercase text-slate-400  md:hidden lg:hidden">Experience</p>
 					{PROJECTS.map((project) => (
@@ -131,11 +137,11 @@ const PROJECTS = [
 						/>
 					  ))}
 				</div>
-				<div class="text-slate-400 flex justify-content" id="Blog">
+				<div class="text-slate-400 flex justify-content py-7 mb-16" id="Blog">
 					<p class="uppercase text-slate-400  md:hidden lg:hidden">Blog</p>
 					<p>Blog Coming Soon: Exciting insights and stories in tech, coding, and beyond. Stay tuned!</p>
 				</div>
-	 -->
+
 			</section>
 		</main>
 		<div class="gradient-cursor"></div>
