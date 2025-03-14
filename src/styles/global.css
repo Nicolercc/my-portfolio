@@ -30,3 +30,92 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+	.nav-link {
+		font-size: 1rem;
+	}
+	.footer {
+		justify-content: center;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.header {
+		padding-bottom: 3% !important;
+	}
+
+	#About,
+	#Experience {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+
+	/* Add padding/margin to the Blog section */
+	#Blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 40%;
+		margin-bottom: 10rem;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	/* Adjust navigation for mobile */
+	.nav {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+
+	.nav ul {
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	.nav-link {
+		font-size: 0.875rem; /* Adjust font size for mobile */
+	}
+
+	/* Adjust footer for mobile */
+	footer {
+		justify-content: center;
+		gap: 1.5rem;
+		padding-top: 2rem;
+	}
+
+	section.flex-col.pr-44 {
+		padding-top: 0;
+		padding-right: 0 !important;
+	}
+
+	/* Remove right-side padding from px-12 */
+	section.flex-col.px-12 {
+		padding-right: 0 !important; /* Override px-12 */
+	}
+
+	/* Optionally, adjust left padding if needed */
+	section.flex-col.px-12 {
+		padding-left: 1rem; /* Adjust as needed */
+	}
+}
+
+.project-card:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
+}
+
+.text-slate-400 {
+	color: #b0b0b0; /* Light grey for text */
+}
+.text-slate-200 {
+	color: #eeeeee; /* Lighter text for improved contrast */
+}
